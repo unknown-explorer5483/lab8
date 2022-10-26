@@ -1,8 +1,7 @@
-<h1>Calc#input</h1>
-<p>Find me in app/views/calc/input.html.erb</p>
+<h1>Страница ввода N</h1>
 <%= form_tag("/calc/view", :method => "get") do %>
 <%= label_tag("Введите число n:") %>
-<%= text_field_tag(:less_than_number) %> <br/>
+<%= number_field_tag(:less_than_number, nil, min: 1) %> <br/>
 <br/>
 <%= submit_tag("Найти палиндромы") %>
 <% end %>

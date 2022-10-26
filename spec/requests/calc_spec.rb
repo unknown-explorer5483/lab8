@@ -15,4 +15,11 @@ RSpec.describe "Calcs", type: :request do
     end
   end
 
+  describe "GET /view" do
+    it "should return correct result on given parameters" do
+      get "/calc/view"
+      expect(response).to have_http_status(:success)
+    end
+  end
+
 end
