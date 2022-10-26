@@ -1,2 +1,22 @@
 <h1>Calc#view</h1>
-<p>Find me in app/views/calc/view.html.erb</p>
+<p>Изначальные данные:</p>
+<p><%= @input %></p>
+<p>Результат:</p>
+<table>
+  <tr>
+    <th>Число</th>
+    <th>Квадрат числа</th>
+  </tr>
+ <% @result.each do |number| %>
+  <tr>
+    <td><%= number[0] %></td>         
+    <td><%= number[1] %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <th>Количество чисел:</th>
+    <th><%= @result.length %></th>
+  </tr>
+</table>
+<br>
+<%= link_to "Repeat calculation", :calc_input %>
